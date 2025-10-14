@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData">
+    <edmx:DataServices m:DataServiceVersion="2.0">
+        <Schema Namespace="ZOTC_FIORI_REPORTING_SRV" xml:lang="en" sap:schema-version="1" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+            <EntityType Name="OTC_REQUESTSType" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="ID" Type="Edm.String" Nullable="false" MaxLength="5000"/>
+                <Property Name="REQUEST_ID" Type="Edm.String" Nullable="false" MaxLength="20"/>
+                <Property Name="REQUEST_TYPE" Type="Edm.String" Nullable="false" MaxLength="15"/>
+                <Property Name="REQUESTOR" Type="Edm.String" Nullable="false" MaxLength="5000"/>
+                <Property Name="REQUESTOR_NAME" Type="Edm.String" Nullable="false" MaxLength="5000"/>
+                <Property Name="REQUESTOR_EMAIL" Type="Edm.String" Nullable="false" MaxLength="5000"/>
+                <Property Name="CURRENCY" Type="Edm.String" Nullable="false" MaxLength="5"/>
+                <Property Name="TOT_BILLING_AMT" Type="Edm.String" Nullable="false" MaxLength="5000"/>
+                <Property Name="TOT_WO_GST" Type="Edm.String" Nullable="false" MaxLength="5000"/>
+                <Property Name="GST_AMT" Type="Edm.String" Nullable="false" MaxLength="5000"/>
+                <Property Name="CUSTOMER_CODE" Type="Edm.String" Nullable="false" MaxLength="25"/>
+                <Property Name="CUSTOMER_NAME" Type="Edm.String" Nullable="false" MaxLength="200"/>
+                <Property Name="CREDIT_NOTE_NO" Type="Edm.String" Nullable="false" MaxLength="20"/>
+                <Property Name="RI_CURRENCY" Type="Edm.String" Nullable="false" MaxLength="5"/>
+                <Property Name="RI_TOT_BILLING_AMT" Type="Edm.String" Nullable="false" MaxLength="5000"/>
+                <Property Name="RI_GST_AMT" Type="Edm.String" Nullable="false" MaxLength="5000"/>
+                <Property Name="RI_TOT_WO_GST" Type="Edm.String" Nullable="false" MaxLength="5000"/>
+                <Property Name="RI_CUSTOMER_CODE" Type="Edm.String" Nullable="false" MaxLength="25"/>
+                <Property Name="RI_CUSTOMER_NAME" Type="Edm.String" Nullable="false" MaxLength="200"/>
+                <Property Name="INVOICE_NO" Type="Edm.String" Nullable="false" MaxLength="20"/>
+                <Property Name="COMPANY_CODE" Type="Edm.String" Nullable="false" MaxLength="10"/>
+                <Property Name="ENTITY_NAME" Type="Edm.String" Nullable="false" MaxLength="150"/>
+                <Property Name="CUSTOMER_TYPE" Type="Edm.String" Nullable="false" MaxLength="25"/>
+                <Property Name="PAYMENT_TERM" Type="Edm.String" Nullable="false" MaxLength="5"/>
+                <Property Name="APP_PAYMENT_TERM" Type="Edm.String" Nullable="false" MaxLength="4"/>
+                <Property Name="REQUEST_STATUS" Type="Edm.Int32" Nullable="false"/>
+                <Property Name="REQUEST_STATUS_DESC" Type="Edm.String" Nullable="false" MaxLength="50"/>
+                <Property Name="IS_REISSUE_INV_REQD" Type="Edm.Int32" Nullable="false"/>
+                <Property Name="COUNTRY" Type="Edm.String" Nullable="false" MaxLength="20"/>
+                <Property Name="HOURS" Type="Edm.String" Nullable="false" MaxLength="20"/>
+                <Property Name="FIXED_RECURRING" Type="Edm.String" Nullable="false" MaxLength="10"/>
+                <Property Name="REQ_AMENDED" Type="Edm.String" Nullable="false" MaxLength="20"/>
+                <Property Name="SECTOR_EMAIL_ID" Type="Edm.String" Nullable="false" MaxLength="100"/>
+                <Property Name="VERIFIER" Type="Edm.String" Nullable="false" MaxLength="5000"/>
+                <Property Name="VERIFIER_NAME" Type="Edm.String" Nullable="false" MaxLength="5000"/>
+                <Property Name="VERIFIER_EMAIL" Type="Edm.String" Nullable="false" MaxLength="5000"/>
+                <Property Name="ACTION_VERIFIER" Type="Edm.String" Nullable="false" MaxLength="50"/>
+                <Property Name="APPROVER" Type="Edm.String" Nullable="false" MaxLength="5000"/>
+                <Property Name="APPROVER_NAME" Type="Edm.String" Nullable="false" MaxLength="5000"/>
+                <Property Name="APPROVER_EMAIL" Type="Edm.String" Nullable="false" MaxLength="5000"/>
+                <Property Name="ACTION_APPROVER" Type="Edm.String" Nullable="false" MaxLength="50"/>
+                <Property Name="OTC_STAFF" Type="Edm.String" Nullable="false" MaxLength="5000"/>
+                <Property Name="OTC_STAFF_NAME" Type="Edm.String" Nullable="false" MaxLength="5000"/>
+                <Property Name="OTC_STAFF_EMAIL" Type="Edm.String" Nullable="false" MaxLength="5000"/>
+                <Property Name="ACTION_OTC" Type="Edm.String" Nullable="false" MaxLength="50"/>
+                <Property Name="VERIFIED_DATE" Type="Edm.DateTime" Nullable="false" Precision="7"/>
+                <Property Name="VERIFIED_DATETIME" Type="Edm.String" Nullable="false" MaxLength="5000"/>
+                <Property Name="APPROVED_DATE" Type="Edm.DateTime" Nullable="false" Precision="7"/>
+                <Property Name="APPROVED_DATETIME" Type="Edm.String" Nullable="false" MaxLength="5000"/>
+                <Property Name="OTC_REVIEW_DATE" Type="Edm.DateTime" Nullable="false" Precision="7"/>
+                <Property Name="OTC_REVIEW_DATETIME" Type="Edm.String" Nullable="false" MaxLength="5000"/>
+                <Property Name="FR_ACT_EXEC_DATE" Type="Edm.DateTime" Nullable="false" Precision="7"/>
+                <Property Name="FR_ACT_EXEC_DATETIME" Type="Edm.String" Nullable="false" MaxLength="5000"/>
+                <Property Name="FR_RECURRING_DATE" Type="Edm.DateTime" Nullable="false" Precision="7"/>
+                <Property Name="FR_RECURRING_DATETIME" Type="Edm.String" Nullable="false" MaxLength="5000"/>
+                <Property Name="FR_MONTH_CUTOFF_DATE" Type="Edm.DateTime" Nullable="false" Precision="7"/>
+                <Property Name="FR_MONTH_CUTOFF_DATETIME" Type="Edm.String" Nullable="false" MaxLength="5000"/>
+                <Property Name="SUBMITTED_DATE" Type="Edm.DateTime" Nullable="false" Precision="7"/>
+                <Property Name="SUBMITTED_DATETIME" Type="Edm.String" Nullable="false" MaxLength="5000"/>
+                <Property Name="UPDATED_DATE" Type="Edm.DateTime" Nullable="false" Precision="7"/>
+                <Property Name="UPDATED_DATETIME" Type="Edm.String" Nullable="false" MaxLength="5000"/>
+                <Property Name="PROCESS_STATUS" Type="Edm.String" Nullable="false" MaxLength="50"/>
+                <Property Name="FR_STATUS_LOG" Type="Edm.String" Nullable="false" MaxLength="5000"/>
+                <Property Name="FR_STATUS" Type="Edm.Int32" Nullable="false"/>
+                <Property Name="FR_STATUS_DESC" Type="Edm.String" Nullable="false" MaxLength="50"/>
+                <Property Name="UPDATED_BY" Type="Edm.String" Nullable="false" MaxLength="50"/>
+            </EntityType>
+            <EntityType Name="OTC_APPR_MATRIX_RESULTSType" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="ID" Type="Edm.Binary" Nullable="false"/>
+                <Property Name="REQUESTOR" Type="Edm.String" Nullable="false" MaxLength="20"/>
+                <Property Name="PROCESS_NAME" Type="Edm.String" Nullable="false" MaxLength="32"/>
+                <Property Name="COMPANY_CODE" Type="Edm.String" Nullable="false" MaxLength="10"/>
+                <Property Name="PROFIT_CENTER" Type="Edm.String" Nullable="false" MaxLength="10"/>
+                <Property Name="OTC" Type="Edm.String" Nullable="false" MaxLength="20"/>
+                <Property Name="STATUS" Type="Edm.String" Nullable="false" MaxLength="5"/>
+                <Property Name="ISACTIVE" Type="Edm.Int32" Nullable="false"/>
+                <Property Name="UPDATED_DATE" Type="Edm.DateTime" Nullable="false" Precision="7"/>
+                <Property Name="UPDATED_BY" Type="Edm.String" Nullable="false" MaxLength="20"/>
+                <Property Name="DESIGNATION_KEY" Type="Edm.String" Nullable="false" MaxLength="30"/>
+                <Property Name="DESIGNATION_VALUE" Type="Edm.String" Nullable="false" MaxLength="20"/>
+            </EntityType>
+            <EntityContainer Name="ZOTC_FIORI_REPORTING_SRV_Entities" m:IsDefaultEntityContainer="true" sap:supported-formats="atom json xlsx">
+                <EntitySet Name="OTC_REQUESTS" EntityType="ZOTC_FIORI_REPORTING_SRV.OTC_REQUESTSType" sap:content-version="1"/>
+                <EntitySet Name="OTC_APPR_MATRIX_RESULTS" EntityType="ZOTC_FIORI_REPORTING_SRV.OTC_APPR_MATRIX_RESULTSType" sap:content-version="1"/>
+            </EntityContainer>
+            <atom:link rel="self" href="https://mobilebizqas.stengglink.com/sap/opu/odata/sap/ZOTC_FIORI_REPORTING_SRV/$metadata" xmlns:atom="http://www.w3.org/2005/Atom"/>
+            <atom:link rel="latest-version" href="https://mobilebizqas.stengglink.com/sap/opu/odata/sap/ZOTC_FIORI_REPORTING_SRV/$metadata" xmlns:atom="http://www.w3.org/2005/Atom"/>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>
