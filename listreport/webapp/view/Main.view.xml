@@ -1,7 +1,83 @@
 <mvc:View controllerName="listreport.controller.Main"
     xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
-    xmlns="sap.m">
+    xmlns="sap.m"
+    xmlns:smartTable="sap.ui.comp.smarttable"
+    xmlns:smartFilterBar="sap.ui.comp.smartfilterbar"
+    xmlns:core="sap.ui.core">
     <Page id="page" title="{i18n>title}">
-        <content />
+       <subHeader>
+        <Toolbar>
+          <Title text="Search" level="H5"/>
+          <ToolbarSpacer/>
+          <Button text="Refresh" type="Transparent" icon="sap-icon://refresh" press=".onRefresh"/>
+        </Toolbar>
+      </subHeader>
+
+      <content>
+        <VBox class="sapUiSmallMargin">
+          <HBox renderType="Bare" class="sapUiSmallMarginBottom" wrap="Wrap">
+            <VBox class="sapUiTinyMarginEnd">
+              <Label text="ID"/>
+              <Input id="inpId" placeholder="Enter ID" width="16rem"/>
+            </VBox>
+            <VBox class="sapUiTinyMarginEnd">
+              <Label text="Customer Name"/>
+              <Input id="inpCustName" placeholder="Enter Customer Name" width="20rem"/>
+            </VBox>
+            <VBox class="sapUiTinyMarginEnd" >
+              <Button id="btnSearch" text="Search" type="Emphasized" press=".onSearch" />
+            </VBox>
+          </HBox>
+
+          <Table id="tbl"
+              width="auto"
+              inset="false"
+              growing="true"
+              growingScrollToLoad="true"
+              noDataText="No data"
+              mode="None"
+              items="{
+              path: '/OTC_REQUESTS',
+              parameters: {
+                select: 'ID,REQUEST_ID,CUSTOMER_NAME,CURRENCY,TOT_BILLING_AMT,REQUEST_STATUS_DESC,SUBMITTED_DATE',
+                countMode: 'Inline'
+              }
+            }">
+          <headerToolbar>
+            <Toolbar>
+              <Title text="Results"/>
+              <ToolbarSpacer/>
+              <Button icon="sap-icon://download" text="Export" press=".onExport"/>
+            </Toolbar>
+          </headerToolbar>
+
+          <columns>
+            <Column width="12rem"><Text text="Request ID"/></Column>
+            <Column width="20rem"><Text text="Customer Name"/></Column>
+            <Column width="8rem"><Text text="Curr."/></Column>
+            <Column width="12rem"><Text text="Total Billing"/></Column>
+            <Column width="16rem"><Text text="Status"/></Column>
+            <Column width="14rem"><Text text="Submitted Date"/></Column>
+          </columns>
+
+          <items>
+            <ColumnListItem>
+              <ObjectIdentifier title="{REQUEST_ID}"/>
+              <ObjectIdentifier title="{CUSTOMER_NAME}"/>
+              <ObjectIdentifier title="{CURRENCY}"/>
+              <ObjectIdentifier title="{TOT_BILLING_AMT}"/>
+              <ObjectStatus text="{REQUEST_STATUS_DESC}"/>
+              <Text text="{ path: 'SUBMITTED_DATE', formatter: '.fmtDate' }"/>
+            </ColumnListItem>
+          </items>
+        </Table>
+        </VBox>
+      </content>
+      <footer>
+        <Toolbar>
+          <ToolbarSpacer/>
+          <Button text="Clear Filters" press=".onClear"/>
+        </Toolbar>
+      </footer>
     </Page>
 </mvc:View>
