@@ -113,17 +113,10 @@
             "settings": {
               "contextPath": "/CMF",
               "variantManagement": "Page",
-              "navigation": {
-                "CMF": {
-                  "detail": {
-                    "route": "CMFObjectPage"
-                  }
-                }
-              },
               "controlConfiguration": {
                 "@com.sap.vocabularies.UI.v1.LineItem": {
                   "tableSettings": {
-                    "type": "AnalyticalTable"
+                    "type": "GridTable"  
                   }
                 }
               }

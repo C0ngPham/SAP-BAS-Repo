@@ -13,7 +13,7 @@
                         <PropertyValue Property="Data">
                             <Collection>
                                 <Record Type="UI.DataField">
-                                    <PropertyValue Property="Label" String="role"/>
+                                    <PropertyValue Property="Label" String="Role"/>
                                     <PropertyValue Property="Value" Path="role"/>
                                 </Record>
                                 <Record Type="UI.DataField">
@@ -21,27 +21,27 @@
                                     <PropertyValue Property="Value" Path="content"/>
                                 </Record>
                                 <Record Type="UI.DataField">
-                                    <PropertyValue Property="Label" String="QUERY_AT"/>
+                                    <PropertyValue Property="Label" String="Query At"/>
                                     <PropertyValue Property="Value" Path="QUERY_AT"/>
                                 </Record>
                                 <Record Type="UI.DataField">
-                                    <PropertyValue Property="Label" String="consent_flag"/>
+                                    <PropertyValue Property="Label" String="Conset Flag"/>
                                     <PropertyValue Property="Value" Path="consent_flag"/>
                                 </Record>
                                 <Record Type="UI.DataField">
-                                    <PropertyValue Property="Label" String="feedback_score"/>
+                                    <PropertyValue Property="Label" String="Feedback Score"/>
                                     <PropertyValue Property="Value" Path="feedback_score"/>
                                 </Record>
                                 <Record Type="UI.DataField">
-                                    <PropertyValue Property="Label" String="feedback"/>
+                                    <PropertyValue Property="Label" String="Feedback"/>
                                     <PropertyValue Property="Value" Path="feedback"/>
                                 </Record>
                                 <Record Type="UI.DataField">
-                                    <PropertyValue Property="Label" String="FEEDBACK_AT"/>
+                                    <PropertyValue Property="Label" String="Feedback At"/>
                                     <PropertyValue Property="Value" Path="FEEDBACK_AT"/>
                                 </Record>
                                 <Record Type="UI.DataField">
-                                    <PropertyValue Property="Label" String="FEEDBACK_BY"/>
+                                    <PropertyValue Property="Label" String="Feedback By"/>
                                     <PropertyValue Property="Value" Path="FEEDBACK_BY"/>
                                 </Record>
                             </Collection>
@@ -60,7 +60,7 @@
                 <Annotation Term="UI.LineItem">
                     <Collection>
                         <Record Type="UI.DataField">
-                            <PropertyValue Property="Label" String="role"/>
+                            <PropertyValue Property="Label" String="Role"/>
                             <PropertyValue Property="Value" Path="role"/>
                         </Record>
                         <Record Type="UI.DataField">
@@ -68,19 +68,27 @@
                             <PropertyValue Property="Value" Path="content"/>
                         </Record>
                         <Record Type="UI.DataField">
-                            <PropertyValue Property="Label" String="QUERY_AT"/>
+                            <PropertyValue Property="Label" String="Query At"/>
                             <PropertyValue Property="Value" Path="QUERY_AT"/>
                         </Record>
                         <Record Type="UI.DataField">
-                            <PropertyValue Property="Label" String="consent_flag"/>
+                            <PropertyValue Property="Label" String="Consent Flag"/>
                             <PropertyValue Property="Value" Path="consent_flag"/>
                         </Record>
                         <Record Type="UI.DataField">
-                            <PropertyValue Property="Label" String="feedback_score"/>
+                            <PropertyValue Property="Label" String="Feedback Score"/>
                             <PropertyValue Property="Value" Path="feedback_score"/>
                         </Record>
                     </Collection>
                 </Annotation>
+                <Annotation Term="UI.SelectionFields">
+                    <Collection>
+                        <PropertyPath>role</PropertyPath>
+                        <PropertyPath>content</PropertyPath>
+                        <PropertyPath>QUERY_AT</PropertyPath>
+                    </Collection>
+                </Annotation>
+
             </Annotations>
         </Schema>
     </edmx:DataServices>
