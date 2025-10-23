@@ -1,0 +1,87 @@
+<edmx:Edmx xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx" Version="4.0">
+    <edmx:Reference Uri="https://sap.github.io/odata-vocabularies/vocabularies/UI.xml">
+        <edmx:Include Namespace="com.sap.vocabularies.UI.v1" Alias="UI"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/643592c7-db95-498b-824b-3fefe8c9b07d.ste-btp-cmbot-ar.stebtpcmbotui-1.0.0/cap-llm-rag/odata/v4/chat/$metadata">
+        <edmx:Include Namespace="ChatService"/>
+    </edmx:Reference>
+    <edmx:DataServices>
+        <Schema xmlns="http://docs.oasis-open.org/odata/ns/edm" Namespace="local">
+            <Annotations Target="ChatService.CMF">
+                <Annotation Term="UI.FieldGroup" Qualifier="GeneratedGroup">
+                    <Record Type="UI.FieldGroupType">
+                        <PropertyValue Property="Data">
+                            <Collection>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="role"/>
+                                    <PropertyValue Property="Value" Path="role"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="content"/>
+                                    <PropertyValue Property="Value" Path="content"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="QUERY_AT"/>
+                                    <PropertyValue Property="Value" Path="QUERY_AT"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="consent_flag"/>
+                                    <PropertyValue Property="Value" Path="consent_flag"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="feedback_score"/>
+                                    <PropertyValue Property="Value" Path="feedback_score"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="feedback"/>
+                                    <PropertyValue Property="Value" Path="feedback"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="FEEDBACK_AT"/>
+                                    <PropertyValue Property="Value" Path="FEEDBACK_AT"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="FEEDBACK_BY"/>
+                                    <PropertyValue Property="Value" Path="FEEDBACK_BY"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="UI.Facets">
+                    <Collection>
+                        <Record Type="UI.ReferenceFacet">
+                            <PropertyValue Property="ID" String="GeneratedFacet1"/>
+                            <PropertyValue Property="Label" String="General Information"/>
+                            <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#GeneratedGroup"/>
+                        </Record>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="UI.LineItem">
+                    <Collection>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="role"/>
+                            <PropertyValue Property="Value" Path="role"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="content"/>
+                            <PropertyValue Property="Value" Path="content"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="QUERY_AT"/>
+                            <PropertyValue Property="Value" Path="QUERY_AT"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="consent_flag"/>
+                            <PropertyValue Property="Value" Path="consent_flag"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="feedback_score"/>
+                            <PropertyValue Property="Value" Path="feedback_score"/>
+                        </Record>
+                    </Collection>
+                </Annotation>
+            </Annotations>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>

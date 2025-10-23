@@ -1,0 +1,29 @@
+{
+  "generationParameters": {
+    "generationDate": "Wed Oct 22 2025 03:35:34 GMT+0000 (Coordinated Universal Time)",
+    "generatorPlatform": "SAP Business Application Studio",
+    "serviceType": "OData URL",
+    "metadataFilename": "",
+    "serviceUrl": "https://stengg-sap-btp-qas.launchpad.cfapps.us10.hana.ondemand.com/643592c7-db95-498b-824b-3fefe8c9b07d.ste-btp-cmbot-ar.stebtpcmbotui-1.0.0/cap-llm-rag/odata/v4/chat/",
+    "appName": "chatbot_dashboard",
+    "appTitle": "Chat bot Dashboard",
+    "appDescription": "An SAP Fiori application.",
+    "appNamespace": "",
+    "ui5Theme": "sap_horizon",
+    "ui5Version": "1.141.3",
+    "enableCodeAssist": false,
+    "enableEslint": false,
+    "enableTypeScript": true,
+    "showMockDataInfo": true,
+    "generatorVersion": "1.19.1",
+    "template": "List Report Page V4",
+    "generatorName": "SAP Fiori Application Generator",
+    "entityRelatedConfig": [
+      {
+        "type": "Main Entity",
+        "value": "CMF"
+      }
+    ],
+    "launchText": "To launch the generated application, run the following from the generated application root folder:\n\n```\n    npm start\n```"
+  }
+}
