@@ -2,6 +2,9 @@
     <edmx:Reference Uri="https://sap.github.io/odata-vocabularies/vocabularies/UI.xml">
         <edmx:Include Namespace="com.sap.vocabularies.UI.v1" Alias="UI"/>
     </edmx:Reference>
+    <edmx:Reference Uri="https://sap.github.io/odata-vocabularies/vocabularies/Common.xml">
+        <edmx:Include Namespace="com.sap.vocabularies.Common.v1" Alias="Common"/>
+    </edmx:Reference>
     <edmx:Reference Uri="/odata/v4/chat/$metadata">
         <edmx:Include Namespace="ChatService"/>
     </edmx:Reference>
@@ -79,6 +82,14 @@
                             <PropertyValue Property="Label" String="Feedback Score"/>
                             <PropertyValue Property="Value" Path="feedback_score"/>
                         </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Feedback At"/>
+                            <PropertyValue Property="Value" Path="FEEDBACK_AT"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Feedback By"/>
+                            <PropertyValue Property="Value" Path="FEEDBACK_BY"/>
+                        </Record>
                     </Collection>
                 </Annotation>
                 <Annotation Term="UI.SelectionFields">
@@ -88,8 +99,12 @@
                         <PropertyPath>QUERY_AT</PropertyPath>
                     </Collection>
                 </Annotation>
-
             </Annotations>
+            <!-- Đổi nhãn cho trường QUERY_AT -->
+            <Annotations Target="ChatService.CMF/FEEDBACK_BY">
+                <Annotation Term="Common.Label" String="Feedback By" />
+            </Annotations>
+            
         </Schema>
     </edmx:DataServices>
 </edmx:Edmx>

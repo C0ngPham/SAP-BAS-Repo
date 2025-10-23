@@ -1,0 +1,34 @@
+<mvc:View
+	controllerName=""
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m"
+	xmlns:c="sap.ui.core"
+    xmlns:chart="sap.viz.ui5.controls"
+    controllerName="cmf.ext.FeedbackChart">
+    <VBox class="sapUiSmallMargin">
+    <Title text="Feedback Distribution" level="H5" />
+    <chart:VizFrame id="feedbackPie"
+      uiConfig="{applicationSet:'fiori'}"
+      width="100%"
+      height="300px"
+      vizType="pie">
+      <chart:dataset>
+        <chart:FlattenedDataset data="{/feedbackCounts}">
+          <chart:dimensions>
+            <chart:DimensionDefinition name="Score" value="{score}" />
+          </chart:dimensions>
+          <chart:measures>
+            <chart:MeasureDefinition name="Count" value="{count}" />
+          </chart:measures>
+        </chart:FlattenedDataset>
+      </chart:dataset>
+      <chart:feeds>
+        <chart:FeedItem uid="size" type="Measure" values="Count" />
+        <chart:FeedItem uid="color" type="Dimension" values="Score" />
+      </chart:feeds>
+    </chart:VizFrame>
+    <Text
+      text="Total records: {= ${/feedbackCounts/0/count} + ${/feedbackCounts/1/count} + ${/feedbackCounts/2/count} }"
+      class="sapUiSmallMarginTop" />
+  </VBox> 
+</mvc:View>
